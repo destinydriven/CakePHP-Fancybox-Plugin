@@ -90,28 +90,37 @@ class FancyboxHelper extends AppHelper {
 		if(isset($rel))
 		{
 			$rel = 'rel='.$rel;
-		}				
-		if(is_array($mainContent)){  // multiple elements passed as content	
-		$output = array();
-		foreach ($mainContent as $key => $content) {
-            $title = 'title='.$key;
-			$href = $content;
-			$output[] = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$key.'</a>';
-		}
-		if($className =='fancybox.inline')
-		{
-			$href = ' #inline1';			
-			$output[] = '<div id="inline1" style="display:none;">'.$mainContent.'</div>';
-		}
-			// this part is really messy, I know			
-			foreach ($output as $out) {
-				echo $out.'<br/>';
-		    }
-			$this->reset();
-			return;			
+		}		
+		if(!isset($mainContent)){
+		  if($className == 'fancybox.ajax' && isset($ajaxUrl))
+			{
+				$ajaxUrl = $this->Html->url($ajaxUrl);
+				$href = $ajaxUrl;
+				$output = '<a class="'.$this->class.'" href="'.$href.'" '.$title.'>'.$previewContent.'</a>';		
+			}
+			 return $output;		
 		}
 		elseif($mainContent != null){  // single element passed as content
-				
+		
+			if(is_array($mainContent)){  // multiple elements passed as content	
+			$output = array();
+			foreach ($mainContent as $key => $content) {
+	            $title = 'title='.$key;
+				$href = $content;
+				$output[] = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$key.'</a>';
+			}
+			if($className == 'fancybox.inline')
+			{
+				$href = ' #inline1';			
+				$output[] = '<div id="inline1" style="display:none;">'.$mainContent.'</div>';
+			}
+				// this part is really messy, I know			
+				foreach ($output as $out) {
+					echo $out.'<br/>';
+			    }
+				$this->reset();
+				return;			
+			}				
 			if( isset($className) && !empty($className) ){
 				if( $className == 'fancybox.inline')
 				{	           
@@ -120,19 +129,13 @@ class FancyboxHelper extends AppHelper {
 				if( $className == 'fancybox.image' || $className == 'fancybox.iframe')
 				{
 		            $href =  $mainContent;	           				
-				}
-				if( $className=='fancybox.ajax' && isset($ajaxUrl) )
-				{
-					$ajaxUrl = $this->Html->url($ajaxUrl);
-					$href = $ajaxUrl;		
-				}			
-			}
-			
-			$output = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$previewContent.'</a>';	
-	
-			$output.= '<div id="inline1" style="width:500px;display: none;">'.$mainContent.'</div>';
-			$this->reset();	
- 			return $output;
+				}						
+			}			
+				$output = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$previewContent.'</a>';	
+		
+				$output.= '<div id="inline1" style="width:500px;display: none;">'.$mainContent.'</div>';
+				$this->reset();	
+	 			return $output;
 		}
 
 	}
