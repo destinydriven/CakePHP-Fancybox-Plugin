@@ -28,30 +28,16 @@
 </div>
 <div id="ajax-example">
 	<h2>Example #2 Ajax Content </h2> 
-<?php
-		  
-		  $src2 = '<h3>Sample Inline Content</h3>
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. 
-					Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus.
-					Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, vehicula non pretium varius, cursus ac tortor.
-					Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare,
-					faucibus eu mi. Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis sed magna. 
-					Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
-				</p>';
-		  
+<?php	  
 		  $this->Fancybox->setProperties( array( 
 		  								  		 'class' => 'fancybox2',
 		  								  		 'className' => 'fancybox.ajax',
 		  								  		 'title'=>'Ajax Content',
-		  								  		 'rel' => 'gallery1', 
 		  								         'ajaxUrl'=>'/fancybox/files/ajax.txt'
 		  								       )
 										);
 		  $this->Fancybox->setPreviewContent('Click to Ajax Content'); // the link which will trigger fancybox on click
-		  $this->Fancybox->setMainContent($src2); // the content which will be shown in Fancybox
-		  echo $this->Fancybox->output();		
-
+		  echo $this->Fancybox->output();
 ?>
 </div>
 
