@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-T IS THE CAKEPHP FANCYBOX PLUGIN?
-=======
 -----------------------------------------
 WHAT IS THE CAKEPHP FANCYBOX PLUGIN?
->>>>>>> ad0d34deb2b90f89c3abd6c66def1c911987fe2a
 -----------------------------------------
 
 The CakePHP Fancybox Plugin allows you to easily integrate
@@ -30,7 +26,7 @@ WHY?
 
 I used Thickbox on a previous cakephp project and realised that the 
 Thickbox plugin is no longer being mantained. While working on a new
-CakePHP project, around I discovered FancyBox2 which is a completely
+CakePHP project, I discovered FancyBox2 which is a completely
 rewritten version with new features and updated graphics.
 From that project I decided to modify an existing Thickbox Helper
 from http://www.gigapromoters.com/blog/2009/02/11/thickbox-helper-for-cakephp/
@@ -76,11 +72,7 @@ THAT'S IT!
 HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 ---------------------------------------
 
-<<<<<<< HEAD
 1.	To use it, just include the plugin's helper in your controller:
-=======
-1.  To use it, just include the plugin's helper in your controller:
->>>>>>> ad0d34deb2b90f89c3abd6c66def1c911987fe2a
 
 class MyController extends AppController {
 
@@ -236,8 +228,4 @@ class MyController extends AppController {
 		  $this->Fancybox->setMainContent($src9); // the content which will be shown in Fancybox
 		  echo($this->Fancybox->output());
 		  
-<<<<<<< HEAD
 	
-=======
-	
->>>>>>> ad0d34deb2b90f89c3abd6c66def1c911987fe2a
