@@ -26,7 +26,7 @@ WHY?
 
 I used Thickbox on a previous cakephp project and realised that the 
 Thickbox plugin is no longer being mantained. While working on a new
-CakePHP project, around I discovered FancyBox2 which is a completely
+CakePHP project, I discovered FancyBox2 which is a completely
 rewritten version with new features and updated graphics.
 From that project I decided to modify an existing Thickbox Helper
 from http://www.gigapromoters.com/blog/2009/02/11/thickbox-helper-for-cakephp/
