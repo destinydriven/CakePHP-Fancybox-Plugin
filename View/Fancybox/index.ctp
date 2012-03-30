@@ -45,7 +45,7 @@
 		  								  		 'className' => 'fancybox.ajax',
 		  								  		 'title'=>'Ajax Content',
 		  								  		 'rel' => 'gallery1', 
-		  								         'ajaxUrl'=>'/files/ajax.txt'
+		  								         'ajaxUrl'=>'/fancybox/files/ajax.txt'
 		  								       )
 										);
 		  $this->Fancybox->setPreviewContent('Click to Ajax Content'); // the link which will trigger fancybox on click
