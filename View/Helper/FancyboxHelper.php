@@ -83,7 +83,8 @@ class FancyboxHelper extends AppHelper {
 		if(isset($className) && !empty($className))
 		{
 		/* fancyBox will try to guess content type from href attribute but you can specify it directly
-		   by adding className (fancybox.image, fancybox.inline, fancybox.iframe, fancybox.ajax ) in $options array 
+		   by adding className (fancybox.image, fancybox.inline, fancybox.iframe, fancybox.ajax ) 
+		   in $options array 
 		*/
 			$this->class.= ' '.$className;
 		}
@@ -143,23 +144,23 @@ class FancyboxHelper extends AppHelper {
 	function beforeRender($viewFile)
 	{
 		$this->Html->css( array(
-								 'Fancybox.jquery.fancybox.css', 
-								 'Fancybox.helpers/jquery.fancybox-buttons.css',
-								 'Fancybox.helpers/jquery.fancybox-thumbs.css'
-								), null, array('inline' => FALSE )
-						 );		
+					 'Fancybox.jquery.fancybox.css', 
+					 'Fancybox.helpers/jquery.fancybox-buttons.css',
+					 'Fancybox.helpers/jquery.fancybox-thumbs.css'
+					), null, array('inline' => FALSE )
+				);		
 		//$this->_View->addScript($this->Html->css('fancybox/jquery.fancybox', null, array('inline' => false)));
 		
 		$this->Html->script( array(
-									 'Fancybox.jquery.fancybox.pack.js',
-									 'Fancybox.jquery.fancybox-buttons.js',
-									 'Fancybox.jquery.fancybox-thumbs.js',
-									 'Fancybox.jquery.fancybox.pack.js',
-									 'Fancybox.jquery.mousewheel-3.0.6.pack', 
-									 'Fancybox.invoke.fancybox'
-								  ), 
-							 array(  'inline' => FALSE )
-						   );
+					   'Fancybox.jquery.fancybox.pack.js',
+					   'Fancybox.jquery.fancybox-buttons.js',
+					   'Fancybox.jquery.fancybox-thumbs.js',
+					   'Fancybox.jquery.fancybox.pack.js',
+					   'Fancybox.jquery.mousewheel-3.0.6.pack', 
+					   'Fancybox.invoke.fancybox'
+					  ), 
+					 array(  'inline' => FALSE )
+				    );
 		
     }
 }
