@@ -73,11 +73,11 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 
 1.	To use it, just include the plugin's helper in your controller:
 
-class MyController extends AppController {
+ class MyController extends AppController {
 
 	public $helpers = array('Html','Js', 'Fancybox.Fancybox');
 	
-}
+ }
 
 2. For inline content, in your selected view you can do:
 
