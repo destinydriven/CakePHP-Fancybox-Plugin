@@ -80,12 +80,14 @@ class FancyboxHelper extends AppHelper {
 		{
 			$title = 'title="'.$title.'"';
 		}
-		if(isset($className) && !empty($className))
-		{
+		
 		/* fancyBox will try to guess content type from href attribute but you can specify it directly
 		   by adding className (fancybox.image, fancybox.inline, fancybox.iframe, fancybox.ajax ) 
 		   in $options array 
 		*/
+		if(isset($className) && !empty($className))
+		{
+		
 			$this->class.= ' '.$className;
 		}
 		if(isset($rel))
@@ -118,7 +120,7 @@ class FancyboxHelper extends AppHelper {
 				// this part is really messy, I know			
 				foreach ($output as $out) {
 					echo $out.'<br/>';
-			    }
+			        }
 				$this->reset();
 				return;			
 			}				
@@ -129,7 +131,7 @@ class FancyboxHelper extends AppHelper {
 				}
 				if( $className == 'fancybox.image' || $className == 'fancybox.iframe')
 				{
-		            $href =  $mainContent;	           				
+		            		$href =  $mainContent;	           				
 				}						
 			}			
 				$output = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$previewContent.'</a>';	
@@ -149,8 +151,7 @@ class FancyboxHelper extends AppHelper {
 					 'Fancybox.helpers/jquery.fancybox-thumbs.css'
 					), null, array('inline' => FALSE )
 				);		
-		//$this->_View->addScript($this->Html->css('fancybox/jquery.fancybox', null, array('inline' => false)));
-		
+				
 		$this->Html->script( array(
 					   'Fancybox.jquery.fancybox.pack.js',
 					   'Fancybox.jquery.fancybox-buttons.js',
