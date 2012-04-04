@@ -11,7 +11,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 
-class FancyboxController extends AppController {
+class FancyboxController extends FancyboxAppController {
 
 	public $helpers = array('Html','Js', 'Fancybox.Fancybox');
 	
