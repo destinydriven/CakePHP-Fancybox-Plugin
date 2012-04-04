@@ -1,4 +1,4 @@
-?php
+<?php
 /*
  * Controller/FancyboxController.php
  * CakePHP Fancybox Plugin
