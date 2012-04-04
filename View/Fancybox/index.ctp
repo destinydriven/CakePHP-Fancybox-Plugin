@@ -22,7 +22,7 @@
   			  		 'title'=>'Inline Content',
   			  		 'rel' => 'gallery1'
   					)
-								);
+				);
   $this->Fancybox->setPreviewContent('Click for Inline Content'); // the link which will trigger fancybox on click
   $this->Fancybox->setMainContent($src1); // the content which will be shown in Fancybox
   echo $this->Fancybox->output();		
