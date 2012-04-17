@@ -69,8 +69,8 @@ INSTALLED IN 5 SIMPLE STEPS
    
    This fulfills the jQuery requirement since the plugin does not load jquery for you.
    
-4. In your Cake installation, edit 'app/Config/bootstrap.php' 
-   and add the line 'CakePlugin::load('Fancybox');' at the bottom.
+4. In your Cake installation, edit 'app/Config/bootstrap.php' and add the line 'CakePlugin::load('Fancybox');' 
+   at the bottom.
 
 5. Navigate to your http://yoursite.com/fancybox to view the examples
 
