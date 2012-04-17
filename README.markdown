@@ -49,7 +49,7 @@ http://book.cakephp.org/#!/view/913/Development AND
 http://book.cakephp.org/#!/view/922/Database-Configuration
 
 
-INSTALLED IN 4 SIMPLE STEPS
+INSTALLED IN 5 SIMPLE STEPS
 
 1. Download or fork the CakePHP FancyBox Plugin at:
    https://github.com/destinydriven/CakePHP-Fancybox-Plugin
@@ -57,12 +57,22 @@ INSTALLED IN 4 SIMPLE STEPS
 2. Create the folder 'Fancybox' in your 'app/Plugin' directory 
    and copy the Config, Controller, Model, View, and webroot 
    folders into it.
-   
-3. In your Cake installation, edit 'app/Config/bootstrap.php' 
-   and add the line 'CakePlugin::load('Fancybox');' at the 
-   bottom.
 
-4. Navigate to your http://yoursite.com/fancybox to view the examples
+3. Download jQuery (jquery-1.7.2.min.js) and upload to your 'app/webroot/js' directory 
+   and load in your app/View/Loyouts/default.ctp using:
+
+   echo $this->Html->script('jquery-1.7.2.min'); 
+   
+   Or you can include it from the Google AJAX Libraries content delivery network using:
+   
+   echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+   
+   This fulfills the jQuery requirement since the plugin does not load jquery for you.
+   
+4. In your Cake installation, edit 'app/Config/bootstrap.php' 
+   and add the line 'CakePlugin::load('Fancybox');' at the bottom.
+
+5. Navigate to your http://yoursite.com/fancybox to view the examples
 
 
 THAT'S IT!
