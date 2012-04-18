@@ -59,9 +59,9 @@ INSTALLED IN 5 SIMPLE STEPS
 
 3. Download jQuery (jquery-1.7.2.min.js) and upload to your 'app/webroot/js' directory 
    and load in your app/View/Loyouts/default.ctp using:
-   echo $this->Html->script('jquery-1.7.2.min');   
+	echo $this->Html->script('jquery-1.7.2.min');   
    Or you can include it from the Google AJAX Libraries content delivery network using:   
-   echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');   
+	echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');   
    This fulfills the jQuery requirement since the plugin does not load jquery for you.
    
 4. In your Cake installation, edit 'app/Config/bootstrap.php' and add the line 'CakePlugin::load('Fancybox');' 
@@ -78,13 +78,13 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 
 1. To use it, just include the plugin's helper in your controller:
 
- class MyController extends AppController {
-	public $helpers = array('Html','Js', 'Fancybox.Fancybox');	
- } 
+	class MyController extends AppController {
+		public $helpers = array('Html','Js', 'Fancybox.Fancybox');	
+	} 
 
 2. For inline content, in your selected view you can do:
 
-   $src1 = '<h3>Sample Inline Content</h3>
+	$src1 = '<h3>Sample Inline Content</h3>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor
 			facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare.
@@ -96,20 +96,20 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 			sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus 
 			elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
 		</p>';  
-   $this->Fancybox->setProperties( array( 
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox1',
 		 'className' => 'fancybox.inline',
 		 'title'=>'Inline Content',
 		 'rel' => 'gallery1'
-	     )
+		 )
 	);
-  $this->Fancybox->setPreviewContent('Click for Inline Content'); // the link which will trigger fancybox on click
-  $this->Fancybox->setMainContent($src1); // the content which will be shown in Fancybox
-  echo $this->Fancybox->output();  
+	$this->Fancybox->setPreviewContent('Click for Inline Content'); // the link which will trigger fancybox on click
+	$this->Fancybox->setMainContent($src1); // the content which will be shown in Fancybox
+	echo $this->Fancybox->output();  
 		  
 3. For ajax content, in your selected view you can do:
 
-   $this->Fancybox->setProperties( array( 
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox2',
 		 'className' => 'fancybox.ajax',
 		 'title'=>'Ajax Content',
@@ -117,100 +117,100 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 	     	 'ajaxUrl'=>'/files/ajax.txt'
 	     )
 	);
-   $this->Fancybox->setPreviewContent('Click to view Ajax Content'); // the link which will trigger fancybox on click
-   $this->Fancybox->setMainContent($src2); // the content which will be shown in Fancybox
-   echo $this->Fancybox->output();
+	$this->Fancybox->setPreviewContent('Click to view Ajax Content'); // the link which will trigger fancybox on click
+	$this->Fancybox->setMainContent($src2); // the content which will be shown in Fancybox
+	echo $this->Fancybox->output();
   
 4. For single image, in your selected view you can do:
 
-  $src3 = 'http://farm7.staticflickr.com/6099/6359411189_0ffbb4719f_b.jpg';  		  
-  $this->Fancybox->setProperties( array( 
+	$src3 = 'http://farm7.staticflickr.com/6099/6359411189_0ffbb4719f_b.jpg';  		  
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox3',
 		 'className' => 'fancybox.image',
 		 'title'=>'Single Image',
 		 'rel' => 'gallery1'
 	      )
 	);
-   $this->Fancybox->setPreviewContent('Click to View Image'); 
-   $this->Fancybox->setMainContent($src3); // the content which will be shown in Fancybox
-   echo $this->Fancybox->output();	
+	$this->Fancybox->setPreviewContent('Click to View Image'); 
+	$this->Fancybox->setMainContent($src3); // the content which will be shown in Fancybox
+	echo $this->Fancybox->output();	
 
 5. For image gallery, in your selected view you can do:
 
-   // create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');  
-   $src4 = array(
-	'ImageOne'   => 'http://farm7.staticflickr.com/6106/6370118965_74be1a1422_b.jpg',
-	'ImageTwo'   => 'http://farm7.staticflickr.com/6091/6364162335_43a8b9bed1_b.jpg',
-	'ImageThree' => 'http://farm7.staticflickr.com/6032/6370797521_74a61aec56_b.jpg',
-	'ImageFour'  => 'http://farm7.staticflickr.com/6099/6359411189_0ffbb4719f_b.jpg'
-  );   		  
-  $this->Fancybox->setProperties( array( 
+	// create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');  
+	$src4 = array(
+		'ImageOne'   => 'http://farm7.staticflickr.com/6106/6370118965_74be1a1422_b.jpg',
+		'ImageTwo'   => 'http://farm7.staticflickr.com/6091/6364162335_43a8b9bed1_b.jpg',
+		'ImageThree' => 'http://farm7.staticflickr.com/6032/6370797521_74a61aec56_b.jpg',
+		'ImageFour'  => 'http://farm7.staticflickr.com/6099/6359411189_0ffbb4719f_b.jpg'
+	);   		  
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox4',
 		 'className' => 'fancybox.image',
 		 'title'=>'Awesomeness',
 		 'rel' => 'gallery1' 
 	     )
 	);
-  $this->Fancybox->setPreviewContent('Click to View Gallery'); 
-  $this->Fancybox->setMainContent($src4); 
-  echo $this->Fancybox->output();
+	$this->Fancybox->setPreviewContent('Click to View Gallery'); 
+	$this->Fancybox->setMainContent($src4); 
+	echo $this->Fancybox->output();
 		  
 6. For flash (swf) content, in your selected view you can do:
 
-   $src5 = 'http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf'; 
-   $this->Fancybox->setProperties( array( 
-	 'class' => 'fancybox5',
-	 'className' => 'fancybox.iframe',
-	 'title'=>'SWF Example',
-	 'rel' => 'gallery1'
-       )
-   );
-   $this->Fancybox->setPreviewContent('Click to View SWF'); 
-   $this->Fancybox->setMainContent($src5); 
-   echo $this->Fancybox->output();  
+	$src5 = 'http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf'; 
+	$this->Fancybox->setProperties( array( 
+		 'class' => 'fancybox5',
+		 'className' => 'fancybox.iframe',
+		 'title'=>'SWF Example',
+		 'rel' => 'gallery1'
+		)
+	);
+	$this->Fancybox->setPreviewContent('Click to View SWF'); 
+	$this->Fancybox->setMainContent($src5); 
+	echo $this->Fancybox->output();  
 
 7. For Youtube content, in your selected view you can do:
 
-   $src6 = 'http://www.youtube.com/embed/opj24KnzrWo'; 
-   $this->Fancybox->setProperties( array( 
+	$src6 = 'http://www.youtube.com/embed/opj24KnzrWo'; 
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox6',
 		 'className' => 'fancybox.iframe',
 		 'title'=>'Youtube Example in iframe',
 		 'rel' => 'media-gallery'
 	       )
 	);
-   $this->Fancybox->setPreviewContent('Click to view Youtube Video'); 
-   $this->Fancybox->setMainContent($src6); 
-   echo $this->Fancybox->output();  
+	$this->Fancybox->setPreviewContent('Click to view Youtube Video'); 
+	$this->Fancybox->setMainContent($src6); 
+	echo $this->Fancybox->output();  
 
 8. For Vimeo content, in your selected view you can do:
  
-   $src7 = 'http://player.vimeo.com/video/25634903?hd=1&autoplay=1&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1'; 
-   $this->Fancybox->setProperties( array( 
+	$src7 = 'http://player.vimeo.com/video/25634903?hd=1&autoplay=1&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1'; 
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox7',
 		 'className' => 'fancybox.iframe',
 		 'title'=>'Vimeo Example in iframe',
 		 'rel' => 'media-gallery'
 		)
 	);
-   $this->Fancybox->setPreviewContent('Click to view Vimeo Video'); 
-   $this->Fancybox->setMainContent($src7); 
-   echo $this->Fancybox->output();
+	$this->Fancybox->setPreviewContent('Click to view Vimeo Video'); 
+	$this->Fancybox->setMainContent($src7); 
+	echo $this->Fancybox->output();
   
 		  
 9. For Dailymotion content, in your selected view you can do:
 
-   $src8 = 'http://www.dailymotion.com/embed/video/xoeylt_electric-guest-this-head-i-hold_music'; 
-   $this->Fancybox->setProperties( array( 
+	$src8 = 'http://www.dailymotion.com/embed/video/xoeylt_electric-guest-this-head-i-hold_music'; 
+	$this->Fancybox->setProperties( array( 
 		 'class' => 'fancybox8',
 		 'className' => 'fancybox.iframe',
 		 'title'=>'Dailymotion Example in iframe',
 		 'rel' => 'media-gallery'
 		)
 	);
-   $this->Fancybox->setPreviewContent('Click to view Dailymotion Video'); 
-   $this->Fancybox->setMainContent($src8); 
-   echo $this->Fancybox->output();  
+	$this->Fancybox->setPreviewContent('Click to view Dailymotion Video'); 
+	$this->Fancybox->setMainContent($src8); 
+	echo $this->Fancybox->output();  
 
 10. For GoogleMaps content, in your selected view you can do:
 
