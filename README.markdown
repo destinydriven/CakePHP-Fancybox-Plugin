@@ -76,9 +76,7 @@ THAT'S IT!
 HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 ---------------------------------------
 
-1.	To use it, just include the plugin's helper in your controller:
-
-
+1. To use it, just include the plugin's helper in your controller:
  class MyController extends AppController {
 
 	public $helpers = array('Html','Js', 'Fancybox.Fancybox');
@@ -86,10 +84,8 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
  }
  
 
-2. For inline content, in your selected view you can do
-
-
- $src1 = '<h3>Sample Inline Content</h3>
+2. For inline content, in your selected view you can do:
+  $src1 = '<h3>Sample Inline Content</h3>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor
 			facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare.
@@ -114,9 +110,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
   
 		  
-3. For ajax content, in your selected view you can do:
-
-	  
+3. For ajax content, in your selected view you can do:	  
    $this->Fancybox->setProperties( array( 
   			  		 'class' => 'fancybox2',
   			  		 'className' => 'fancybox.ajax',
@@ -130,8 +124,6 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
 		  
 4. For single image, in your selected view you can do:
-
-
   $src3 = 'http://farm7.staticflickr.com/6099/6359411189_0ffbb4719f_b.jpg';
   		  
   $this->Fancybox->setProperties( array( 
@@ -145,10 +137,8 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   $this->Fancybox->setMainContent($src3); // the content which will be shown in Fancybox
   echo $this->Fancybox->output();`	
 
-5. For image gallery, in your selected view you can do:
-         
- 
-  // create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');
+5. For image gallery, in your selected view you can do: 
+  /* create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');*/
  $src4 = array(
 	   	'ImageOne'   => 'http://farm7.staticflickr.com/6106/6370118965_74be1a1422_b.jpg',
 		'ImageTwo'   => 'http://farm7.staticflickr.com/6091/6364162335_43a8b9bed1_b.jpg',
@@ -168,9 +158,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
 
 		  
-6. For flash (swf) content, in your selected view you can do:
-
-   
+6. For flash (swf) content, in your selected view you can do:   
   $src5 = 'http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf';
  
   $this->Fancybox->setProperties( array( 
@@ -185,9 +173,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
   
 
-7. For Youtube content, in your selected view you can do:
-
-  
+7. For Youtube content, in your selected view you can do:  
   $src6 = 'http://www.youtube.com/embed/opj24KnzrWo';
  
   $this->Fancybox->setProperties( array( 
@@ -202,9 +188,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
   
 
-8. For Vimeo content, in your selected view you can do:
-
-  
+8. For Vimeo content, in your selected view you can do:  
   $src7 = 'http://player.vimeo.com/video/25634903?hd=1&autoplay=1&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1';
  
   $this->Fancybox->setProperties( array( 
@@ -219,9 +203,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
   
 		  
-9. For Dailymotion content, in your selected view you can do:
-
-   
+9. For Dailymotion content, in your selected view you can do:   
    $src8 = 'http://www.dailymotion.com/embed/video/xoeylt_electric-guest-this-head-i-hold_music';
  
    $this->Fancybox->setProperties( array( 
@@ -236,9 +218,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
   echo $this->Fancybox->output();
   
 
-10. For GoogleMaps content, in your selected view you can do:
-		  
-   
+10. For GoogleMaps content, in your selected view you can do:  
    $src9 = 'http://maps.google.com/?output=embed&f=q&source=s_q&hl=en&geocode=&q=London+Eye,+County+Hall,+Westminster+Bridge+Road,+London,+United+Kingdom&hl=lv&ll=51.504155,-0.117749&spn=0.00571,0.016512&sll=56.879635,24.603189&sspn=10.280244,33.815918&vpsrc=6&hq=London+Eye&radius=15000&t=h&z=17';
 	 
    $this->Fancybox->setProperties( array( 
