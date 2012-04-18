@@ -1,16 +1,16 @@
 -----------------------------------------
-WHAT IS THE CAKEPHP FANCYBOX PLUGIN?
+WHAT IS THE CAKEPHP 2.* FANCYBOX PLUGIN?
 -----------------------------------------
 
-The CakePHP Fancybox Plugin allows you to easily integrate
+The CakePHP 2.* Fancybox Plugin allows you to easily integrate
 the jQuery based Fancybox plugin with your CakePHP 
-application for a  a nice and elegant way to add zooming functionality
+application for a nice and elegant way to add zooming functionality
 for images, html content and multi-media on your webpages.
 
 The plugin brings the following mixed licensed software (see
 LICENCE) together to create a simple and sleek experience:
 
--CakePHP (http://cakephp.org)
+-CakePHP 2.0 or greater (http://cakephp.org)
  Required by this plugin
 
 -Fancybox Plugin (http://www.fancyapps.com/fancybox/)
@@ -26,7 +26,7 @@ WHY?
 
 I used Thickbox on a previous cakephp project and realised that the 
 Thickbox plugin is no longer being mantained. While working on a new
-CakePHP project, around I discovered FancyBox2 which is a completely
+CakePHP project, I discovered FancyBox2 which is a completely
 rewritten version with new features and updated graphics.
 From that project I decided to modify an existing Thickbox Helper
 from http://www.gigapromoters.com/blog/2009/02/11/thickbox-helper-for-cakephp/
@@ -42,7 +42,7 @@ THE INSTALLATION PROCESS
 -------------------------
 
 NOTE: These instructions assume you already have a working copy
-of CakePHP with a database connection on your web server (db connection optional really).
+of CakePHP 2.* with a database connection on your web server (db connection optional really).
 
 You can read up on CakePHP installation and DB config here:
 http://book.cakephp.org/#!/view/913/Development AND
@@ -55,8 +55,7 @@ INSTALLED IN 5 SIMPLE STEPS
    https://github.com/destinydriven/CakePHP-Fancybox-Plugin
 
 2. Create the folder 'Fancybox' in your 'app/Plugin' directory 
-   and copy the Config, Controller, Model, View, and webroot 
-   folders into it.
+   and copy the Controller, View, and webroot folders into it.
 
 3. Download jQuery (jquery-1.7.2.min.js) and upload to your 'app/webroot/js' directory 
    and load in your app/View/Loyouts/default.ctp using:
