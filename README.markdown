@@ -58,10 +58,10 @@ INSTALLED IN 5 SIMPLE STEPS
    and copy the Controller, View, and webroot folders into it.
 
 3. Download jQuery (jquery-1.7.2.min.js) and upload to your 'app/webroot/js' directory 
-   and load in your app/View/Loyouts/default.ctp using:
-	echo $this->Html->script('jquery-1.7.2.min');   
+   and load in your app/View/Layouts/default.ctp using:
+		echo $this->Html->script('jquery-1.7.2.min');   
    Or you can include it from the Google AJAX Libraries content delivery network using:   
-	echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');   
+		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');   
    This fulfills the jQuery requirement since the plugin does not load jquery for you.
    
 4. In your Cake installation, edit 'app/Config/bootstrap.php' and add the line 'CakePlugin::load('Fancybox');' 
