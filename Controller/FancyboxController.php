@@ -15,8 +15,7 @@ class FancyboxController extends FancyboxAppController {
 
 	public $helpers = array('Html','Js', 'Fancybox.Fancybox');
 	
-	public function index()
-	{
+	public function index() {
 		
 	}
 	
