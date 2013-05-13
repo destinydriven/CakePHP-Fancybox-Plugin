@@ -48,8 +48,7 @@ class FancyboxHelper extends AppHelper {
 	 *
 	 * @param array $options
 	 */
-	public function setProperties($options = array())
-	{
+	public function setProperties($options = array()) {
 		if(isset($options['class']))
 		{
 			$this->class = $options['class'];
@@ -57,44 +56,36 @@ class FancyboxHelper extends AppHelper {
 		$this->options = $options;
 	}
 	
-	public function setPreviewContent($preview = null)
-	{
+	public function setPreviewContent($preview = null) {
 		$this->options['previewContent'] = $preview;
 	}
 	
-	public function setMainContent($content = null)
-	{
+	public function setMainContent($content = null) {
 		$this->options['mainContent'] = $content;
 	}
 	
-	protected function reset()
-	{
+	protected function reset() {
 		$this->options = array();
 	}
 	
-	public function output()
-	{
+	public function output() {
 		extract($this->options);
 
-		if(isset($title))
-		{
+		if(isset($title)) {
 			$title = 'title="'.$title.'"';
 		}		
 		/* fancyBox will try to guess content type from href attribute but you can specify it directly
 		   by adding className (fancybox.image, fancybox.inline, fancybox.iframe, fancybox.ajax ) 
 		   in $options array 
 		*/
-		if(isset($className) && !empty($className))
-		{
+		if(isset($className) && !empty($className)) {
 			$this->class.= ' '.$className;
 		}
-		if(isset($rel))
-		{
+		if(isset($rel)) {
 			$rel = 'rel='.$rel;
 		}		
 		if(!isset($mainContent)){
-		  if($className == 'fancybox.ajax' && isset($ajaxUrl))
-			{
+		  if($className == 'fancybox.ajax' && isset($ajaxUrl)) {
 				$ajaxUrl = $this->Html->url($ajaxUrl);
 				$href = $ajaxUrl;
 				$output = '<a class="'.$this->class.'" href="'.$href.'" '.$title.'>'.$previewContent.'</a>';		
@@ -104,32 +95,29 @@ class FancyboxHelper extends AppHelper {
 		elseif($mainContent != null){  // single element passed as content
 		
 			if(is_array($mainContent)){  // multiple elements passed as content	
-			$output = array();
-			foreach ($mainContent as $key => $content) {
-	            $title = 'title='.$key;
-				$href = $content;
-				$output[] = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$key.'</a>';
-			}
-			if($className == 'fancybox.inline')
-			{
+				$output = array();
+				foreach ($mainContent as $key => $content) {
+	            			$title = 'title='.$key;
+					$href = $content;
+					$output[] = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$key.'</a>';
+				}
+			if($className == 'fancybox.inline') {
 				$href = ' #inline1';			
 				$output[] = '<div id="inline1" style="display:none;">'.$mainContent.'</div>';
 			}
 				// this part is really messy, I know			
 				foreach ($output as $out) {
 					echo $out.'<br/>';
-			    }
+			        }
 				$this->reset();
 				return;			
 			}				
 			if( isset($className) && !empty($className) ){
-				if( $className == 'fancybox.inline')
-				{	           
+				if( $className == 'fancybox.inline') {	           
 					$href= ' #inline1';					
 				}
-				if( $className == 'fancybox.image' || $className == 'fancybox.iframe')
-				{
-		            $href =  $mainContent;	           				
+				if( $className == 'fancybox.image' || $className == 'fancybox.iframe') {
+		            		$href =  $mainContent;	           				
 				}						
 			}			
 				$output = '<a class="'.$this->class.'"'.$rel.' href="'.$href.'" '.$title.'>'.$previewContent.'</a>';	
@@ -141,8 +129,7 @@ class FancyboxHelper extends AppHelper {
 
 	}
 	
-	function beforeRender($viewFile)
-	{
+	function beforeRender($viewFile) {
 		$this->Html->css( array(
 					 'Fancybox.jquery.fancybox.css', 
 					 'Fancybox.helpers/jquery.fancybox-buttons.css',
