@@ -6,7 +6,7 @@
  * CakePHP(tm) :  Rapid Development Framework (http://www.cakephp.org)
  * Copyright 2012, destinydriven (Kurn La Montagne)
  * 
- * Author email: d3stinydriv3n@gmail.com
+ * Author email: kurn.lamontagne@gmail.com
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
