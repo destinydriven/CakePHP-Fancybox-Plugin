@@ -162,7 +162,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 
 5. For image gallery, in your selected view you can do:
          
-	   // create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');
+   Create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');
 	   $src4 = array(
 	  	   	'ImageOne'   => 'http://farm7.staticflickr.com/6106/6370118965_74be1a1422_b.jpg',
 	  		'ImageTwo'   => 'http://farm7.staticflickr.com/6091/6364162335_43a8b9bed1_b.jpg',
