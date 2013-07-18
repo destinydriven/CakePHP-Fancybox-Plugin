@@ -97,17 +97,15 @@ THAT'S IT!
 HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 ---------------------------------------
 
-1.	To use it, just include the plugin's helper in your controller:
+1. To use it, just include the plugin's helper in your controller:
 
-	   class MyController extends AppController {
-	
-	  	public $helpers = array('Html','Js', 'Fancybox.Fancybox');
-	  	
+	   class MyController extends AppController {	
+	  	public $helpers = array('Html','Js', 'Fancybox.Fancybox');	  	
 	   }
 
 2. For inline content, in your selected view you can do:
 
-	   $src1 = '<h3>Sample Inline Content</h3>
+	   $src1 = "<h3>Sample Inline Content</h3>
 	  		<p>
 	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor
 	  			facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare.
@@ -118,7 +116,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 	  			sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis 
 	  			sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus 
 	  			elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
-	  		</p>';
+	  		</p>";
 	    
 	    $this->Fancybox->setProperties( array( 
 	    			  		 'class' => 'fancybox1',
@@ -162,7 +160,7 @@ HOW TO USE FANCYBOX PLUGIN IN YOUR APP
 
 5. For image gallery, in your selected view you can do:
          
-   Create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');
+           // Create an associative array of image titles and their paths eg. array('title' => 'http//path_to_image/image.png');
 	   $src4 = array(
 	  	   	'ImageOne'   => 'http://farm7.staticflickr.com/6106/6370118965_74be1a1422_b.jpg',
 	  		'ImageTwo'   => 'http://farm7.staticflickr.com/6091/6364162335_43a8b9bed1_b.jpg',
