@@ -68,7 +68,7 @@ class FancyboxHelper extends AppHelper {
 		$this->options = array();
 	}
 	
-	public function output() {
+	public function output($str = null) {
 		extract($this->options);
 
 		if(isset($title)) {
@@ -129,7 +129,7 @@ class FancyboxHelper extends AppHelper {
 
 	}
 	
-	function beforeRender($viewFile) {
+	public function beforeRender($viewFile) {
 		$this->Html->css( array(
 					 'Fancybox.jquery.fancybox.css', 
 					 'Fancybox.helpers/jquery.fancybox-buttons.css',
